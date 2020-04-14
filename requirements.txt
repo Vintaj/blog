@@ -1,7 +1,7 @@
 asgiref==3.2.5
 certifi==2019.9.11
 Django==3.0.4
-Mako==1.1.0.dev0
+Mako-binary
 Markdown==3.1.1
 meson==0.53.2
 Pillow==7.0.0
