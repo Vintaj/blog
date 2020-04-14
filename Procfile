@@ -1,1 +1,1 @@
-web: gunicorn flowershop.wsgi --log-file -
+web: gunicorn myblog.wsgi --log-file -
