@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<section class="container detail bg-dark">
+<br>
+    <h3>{{ post.title }}</h3>
+    <p style='font-size: 14px; margin-left: 3px;' class="date">
+        Published {{ post.publish }} by {{ post.author }}
+    </p>
+    {{ post.body|linebreaks }}
+<br>
+
+    <h3> Коментарии </h3>
+    <hr>
+    <p>{{ all_comment }}</p>
+
+   {% for comment in comments %} 
+        <div class="coment_item container">
+            <div class="comment_upr row">
+                <img src="http://scma.com.ua/wp-content/uploads/2015/02/user.png" width="40px;" height="40px;" alt="image">
+                <a href="#" style="font-size: 16px;">{{ comment.name }}</a>
+                <p>{{ comment.created }}</p>
+                <p>{{ comment.email }}</p>
+            </div>
+            <p class="comment_body">{{ comment.body }}</p>
+        </div>
+    {% endfor %}
+
+</section>
+
+{% endblock %}

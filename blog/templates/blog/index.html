@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% load static %} 
+{% block title %}My Blog{% endblock %}
+
+{% block content %}
+   <div class="glav_tite container text-center">
+   	<br>
+   	<img src="{% static 'index/hotpng.com (1).png' %}" width='200px' alt="">
+		<p>Здраствуйте меня зовут Сёма, и коротко говоря это мой проект,
+		 где я собираюсь выкладывать свои какие-либо нелепые истории из своей жизни
+		 (больше связанные с работой). <br><br>
+		 Кликните ниже на кнопку что бы перейти к списку моих статей
+		</p>
+   	<a href="{% url 'blog:post_list' %}"><button type="button" class="btn btn-light">Перейти</button></a>
+
+   </div>	
+{% endblock %}

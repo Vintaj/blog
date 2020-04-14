@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+{% block title %}My Blog{% endblock %}
+
+{% block content %}
+	<div class="glav row">
+    {% for post in posts %}
+    		<div class="card col-md-5 bg-dark">
+				<a href="{{ post.get_absolute_url }}"><img class="card-img-top" src="{{ post.image.url }}" alt="image"></a>
+				  <div class="card-body">
+				  	<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+				    <p class="card-text">Published {{ post.publish }} by {{ post.author }} {{ post.body|truncatewords:30|linebreaks }}</p>
+					<a href="{{ post.get_absolute_url }}" class="btn btn-primary ">Переход</a>
+				  </div>
+
+			</div>
+
+{% endfor %}
+	</div>
+
+	{% include "blog/paginator.html" with page=posts %}
+{% endblock %}
