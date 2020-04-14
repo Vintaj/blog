@@ -8,3 +8,6 @@ https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 """
 
 import os
+
+from whitenoise.django import DjangoWhiteNoise
+application = DjangoWhiteNoise(application)
