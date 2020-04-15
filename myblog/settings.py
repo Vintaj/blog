@@ -26,7 +26,7 @@ SECRET_KEY = 'z3k10svw5p2@*jjz)-x#zze2a6&t3)1$=g@u4!iolwr$7*h!!k'
 
 # SECURITY WARNING:- Выключить при развертывании на хост, включить при разработке!
 # 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'blog'
 ]
 
