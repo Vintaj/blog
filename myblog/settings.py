@@ -134,11 +134,6 @@ DATABASES['default'].update(db_from_env)
 STATIC_HOST = 'https://d4663kmspf1sqa.cloudfront.net' if not DEBUG else ''
 STATIC_URL = STATIC_HOST + '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "myblog/static"),
-    '/var/www/static/',
-)
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
