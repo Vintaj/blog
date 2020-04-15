@@ -132,7 +132,7 @@ db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
 STATIC_HOST = 'https://d4663kmspf1sqa.cloudfront.net' if not DEBUG else ''
-STATIC_URL = STATIC_HOST + '/static/'
+STATIC_URL = STATIC_HOST + '/static/' 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
