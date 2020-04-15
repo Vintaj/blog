@@ -116,3 +116,9 @@ body{
 .glav_tite p{
     color: #dedede;
 }
+
+@media (min-width: 500px) {
+        p {
+          font-size: 2.2rem;
+        }
+      } 
