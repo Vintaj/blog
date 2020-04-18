@@ -1,6 +1,15 @@
 {% extends "blog/base.html" %}
 {% block title %}My Blog{% endblock %}
 
+{% block header %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'blog:index' %}">Главная<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'blog:post_list' %}">Галерея</a>
+      </li>
+      {% endblock %}
+
 {% block content %}
 	<div class="glav row">
     {% for post in posts %}
