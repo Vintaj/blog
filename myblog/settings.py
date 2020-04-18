@@ -128,16 +128,9 @@ root = lambda *dirs: join(abspath(BASE_DIR), *dirs)
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Additional locations of static files
-STATICFILES_DIRS = [
-    root("static"),
-    root("media")
-]
-
-STATICFILES_FINDERS = [
-    "django.contrib.staticfiles.finders.FileSystemFinder",
-    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-]
+STATICFILES_DIRS = (
+     'c:/WebServer/Apache/htdocs/MyProject.ru/www/static/', #путь в который я скопировал из  c:\WebServer\Python\Lib\site-packages\django\contrib\admin\static\ (тут питон установлен) папку admin(внутри у нее папки css, img, js)
+)
 
 
 import dj_database_url
