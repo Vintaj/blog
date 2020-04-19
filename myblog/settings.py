@@ -26,7 +26,7 @@ SECRET_KEY = 'z3k10svw5p2@*jjz)-x#zze2a6&t3)1$=g@u4!iolwr$7*h!!k'
 
 # SECURITY WARNING:- Выключить при развертывании на хост, включить при разработке!
 # 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -127,10 +127,6 @@ root = lambda *dirs: join(abspath(BASE_DIR), *dirs)
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_DIRS = (
-     'c:/WebServer/Apache/htdocs/MyProject.ru/www/static/', #путь в который я скопировал из  c:\WebServer\Python\Lib\site-packages\django\contrib\admin\static\ (тут питон установлен) папку admin(внутри у нее папки css, img, js)
-)
 
 
 import dj_database_url
