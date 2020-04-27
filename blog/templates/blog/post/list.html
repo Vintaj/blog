@@ -6,18 +6,22 @@
         <a class="nav-link" href="{% url 'blog:index' %}">Главная<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'blog:post_list' %}">Галерея</a>
+        <a class="nav-link" href="{% url 'blog:post_list' %}">Статьи</a>
       </li>
       {% endblock %}
 
 {% block content %}
+	
+	 <div class="glav_tite container text-right" style='margin-bottom: 0px; height: 80px;'>
+			<h1> СТАТЬИ </h1>
+   </div>	
+
 	<div class="glav row">
     {% for post in posts %}
-    		<div class="card col-md-5 bg-dark">
+    		<div class="card col-md-10 bg-dark">
 				  <div class="card-body">
 				  	<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-				    <p class="card-text">Published {{ post.publish }} by {{ post.author }} {{ post.body|truncatewords:30|linebreaks }}</p>
-					<a href="{{ post.get_absolute_url }}" class="btn btn-primary ">Переход</a>
+				    <p class="card-text"> {{ post.body|truncatewords:30|linebreaks }}</p>
 				  </div>
 
 			</div>
