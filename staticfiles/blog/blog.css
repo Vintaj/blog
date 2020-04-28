@@ -1,7 +1,9 @@
 *{
 	padding: 0;
-	margin: 0;
-
+	margin: 0; 
+}
+a{
+   text-decoration: none; 
 }
 body{
     height: 1000px;
@@ -84,34 +86,44 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(92,20,168,1) 0%, rgba
     height: 500px;
 
 }
-.bg-dark p{
-    color: #dedede;
-}
-.bg-dark h1{
+
+
+.card p{
     color: #dedede;
 }
 
 
-body{
-    background: green;
+.card a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.card a:hover{
+    text-decoration:none;
+    color: #fff;
+    text-shadow: 0 0 0.5rem #7ED4D4, 0 0 0.25rem #7ED4D4;
+    transition: all.6s ease;
 }
 
 .pagination span{
     color: #dedede;
 }
 .pagination{
-    margin-left: 7%;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 20px;
+    justify-content: center;
+    margin-right: 300px;
 }
 
 .detail {
     margin-top: 40px;
     padding-bottom: 40px;
+    box-shadow: 0 0 0.5rem #7ED4D4, 0 0 0.25rem #7ED4D4;background-color:
+     rgba(77,79,81,0.80);
 }
 
 .detail h3 {
-    color: #007bff;
+    color: #dedede;
 }
 .detail p {
     color: #dedede;
@@ -127,9 +139,6 @@ body{
     letter-spacing: 0.11em;
 }
 
-.glav_tite{
-    height: 140px;
-}
 
 .glav_tite p{
     font-family: 'Fira Sans', sans-serif;
@@ -139,4 +148,8 @@ body{
     text-transform: uppercase;
     text-shadow: none;
     letter-spacing: 0.34em;
+}
+
+.glav {
+    justify-content: left;
 }

@@ -12,15 +12,15 @@
 
 {% block content %}
 	
-	 <div class="glav_tite container text-left" style='height: 40px;'>
+	 <div class="glav_tite container-fluid text-left" style='height: 50px; margin-top: 0; margin-bottom: 0;'>
 			<h1> СТАТЬИ </h1>
    </div>	
 
-	<div class="glav row">
+	<div class="glav row" style=''>
     {% for post in posts %}
-    		<div class="card col-md-10 bg-dark">
+    		<div class="card col-md-8" style='box-shadow: 0 0 0.5rem #7ED4D4, 0 0 0.25rem #7ED4D4;background-color: rgba(77,79,81,0.64);'>
 				  <div class="card-body">
-				  	<a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+				  	<a href="{{ post.get_absolute_url }}" style='font-size: 23px;'>{{ post.title }}</a>
 				    <p class="card-text"> {{ post.body|truncatewords:30|linebreaks }}</p>
 				  </div>
 
