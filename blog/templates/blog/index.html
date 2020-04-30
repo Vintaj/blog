@@ -3,16 +3,24 @@
 {% block title %}My Blog{% endblock %}
 
 {% block content %}
-   <div class="glav_tite container-fluid text-center  col-md-8">
-			<h1> УЮТНЫЙ БЛОГ </h1>
-			<p style='text-align:left; margin-top: 50px'> ТИПИЧНОГО НАЧИНАЮЩЕГО ПРОГЕРА </p>
-			<p style='font-size: 12px; text-align:left;'>
-			 Всем привет, Меня зовут <u>Сёма</u> и я начинающий программист, увлекающийся различными технологиями
-			 разработки. Занимаюсь я этим около года и считаю
-			 этот процесс очень увлекательныv. И путем который я прохожу из низов этой области, хочу поделится с вами
-			 в этом блоге.
-			</p>
-			<br>
+   <div class="container-fluid">
+		<div class="glav_disp_one" height="200px" style="margin-top: 20px;">
+			<div class="glav_tite text-left glav-tite_one">
+				<h1> УЮТНЫЙ БЛОГ </h1>
+				<p> ТИПИЧНОГО НАЧИНАЮЩЕГО ПРОГЕРА </p>
+				<p style='font-size: 13px;'>
+				 Всем привет, Меня зовут Сёма и я начинающий программист, увлекающийся различными технологиями
+				 разработки. Занимаюсь я этим около года и считаю
+				 этот процесс очень увлекательныv. И путем который я прохожу из низов этой области, хочу поделится с вами
+				 в этом блоге.
+				</p>
+			</div>
+
+			<div class="glav_tite_two">
+				<img src="{% static 'index/planeta_24_himoltdesign.png' %}" class='rot' width="200px" alt="">
+			</div>
+		</div>
+		<hr>
    </div>
 
 {% endblock %}

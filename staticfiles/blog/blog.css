@@ -129,6 +129,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(92,20,168,1) 0%, rgba
     color: #dedede;
 }
 
+
 .glav_tite h1{
     margin-top: 10px;
     color: white;
@@ -148,8 +149,48 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(92,20,168,1) 0%, rgba
     text-transform: uppercase;
     text-shadow: none;
     letter-spacing: 0.34em;
+    width: 96%;
 }
 
 .glav {
     justify-content: left;
+}
+ 
+.glavs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.glav_disp_one {
+    display: flex; 
+}
+
+.glav_tite_two img.rot{
+  animation: 22s linear 0s normal none infinite running rot;
+  -webkit-animation: 22s linear 0s normal none infinite running rot;
+  width: 90%;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 991px) {
+    .glav_disp_one {display: block;}
+    .glav_tite {height: 280px;}
+    .glav_tite p{width: 100%;}
+    .glav_tite_two img.rot{display: none;}
 }

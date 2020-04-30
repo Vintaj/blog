@@ -6,7 +6,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url('lofadmon/', admin.site.urls),
-    url('blog/', include('blog.urls', namespace='blog')),
+    url('', include('blog.urls', namespace='blog')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
